@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".ui.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_marginTop="@dimen/large"
+        android:layout_marginEnd="@dimen/medium"
+        app:cardCornerRadius="@dimen/small">
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_bar_background"
+            android:drawableStart="@drawable/ic_zoom"
+            android:drawablePadding="@dimen/small"
+            android:drawableTint="@color/gray_200"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="@string/search_hint"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:padding="@dimen/medium"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/text_size" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/filters_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_card"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_marginTop="@dimen/medium"
+        android:layout_marginEnd="@dimen/medium"
+        app:cardCornerRadius="@dimen/small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small"
+            android:weightSum="1">
+
+
+            <CheckBox
+                android:id="@+id/woman_checkbox"
+                style="@style/filterCheckboxStyle"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="@string/woman" />
+
+            <CheckBox
+                android:id="@+id/man_checkbox"
+                style="@style/filterCheckboxStyle"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="@string/man" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recycler_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filters_card"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_marginTop="@dimen/medium"
+        android:layout_marginEnd="@dimen/medium"
+        android:layout_marginBottom="@dimen/large"
+        android:visibility="visible"
+        app:cardCornerRadius="@dimen/small">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/doctor_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/medium" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/empty_list_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:cardCornerRadius="120dp">
+
+        <ImageView
+            android:id="@+id/empty_list_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="@dimen/medium"
+            android:padding="@dimen/medium"
+            android:src="@drawable/ic_avatar"
+            app:tint="#AEAEB4" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/empty_list_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/empty_list_card"
+        android:layout_marginTop="@dimen/medium"
+        android:text="@string/not_found"
+        android:textAlignment="center"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/text_size"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

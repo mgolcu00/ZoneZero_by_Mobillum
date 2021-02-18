@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Zone Zero</string>
+    <string name="search_hint">Klinik ara...</string>
+    <string name="man">Erkek</string>
+    <string name="woman">Kadın</string>
+    <string name="small_image">small_image</string>
+    <string name="get_appointment">Randevu Al</string>
+    <string name="get_premium">Premium Paket Al</string>
+    <string name="not_found">Kullanıcı bulunamadı.</string>
+    <string name="appointment_string">Randevu Ekranı</string>
+    <string name="payment_string">Ödeme Ekranı</string>
+    <string name="connection_fail">Lütfen internet bağlantınızı kontrol ediniz.</string>
+</resources>

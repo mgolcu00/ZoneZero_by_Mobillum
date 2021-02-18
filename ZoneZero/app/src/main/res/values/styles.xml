@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="filterCheckboxStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:button">@drawable/custom_checkbox_selector</item>
+        <item name="android:buttonTint">@color/filters_button_color</item>
+        <item name="android:padding">@dimen/small</item>
+        <item name="android:textColor">@color/filters_button_color</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+    <style name="cardStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/medium</item>
+        <item name="android:layout_marginTop">@dimen/medium</item>
+        <item name="android:layout_marginEnd">@dimen/medium</item>
+    </style>
+
+</resources>
